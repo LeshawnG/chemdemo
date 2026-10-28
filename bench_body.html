@@ -1,0 +1,100 @@
+<div class="wrap" id="wrap">
+  <header>
+    <h1>Lab 3 Bench<small>CHEM 1170 · Week 9</small></h1>
+    <div class="tabs" role="tablist" aria-label="Lab parts">
+      <button type="button" role="tab" id="t-symmetry" aria-controls="p1" aria-selected="true" data-tab="symmetry">Part 1 <span>Symmetry</span></button>
+      <button type="button" role="tab" id="t-unit-cells" aria-controls="p2" aria-selected="false" data-tab="unit-cells">Part 2 <span>Unit cells</span></button>
+      <button type="button" role="tab" id="t-lattices" aria-controls="p3" aria-selected="false" data-tab="lattices">Part 3 <span>NaCl &amp; CsCl</span></button>
+    </div>
+    <div class="tools">
+      <button id="bStudent" type="button" aria-pressed="false">Student mode</button>
+      <button id="bPresent" type="button" aria-pressed="false">Present</button>
+    </div>
+  </header>
+
+  <!-- ===================================================== PART 1 -->
+  <section class="pane" id="p1" role="tabpanel" aria-labelledby="t-symmetry">
+    <div class="bar">
+      <div class="seg" id="molSel" role="group" aria-label="Molecule"></div>
+      <span class="sp"></span>
+      <button id="bLabels" type="button" aria-pressed="true">Labels</button>
+      <button id="bReset" type="button">Reset view</button>
+      <button id="bDown" type="button">Down main axis</button>
+    </div>
+    <div class="app">
+      <div class="stage" id="stage">
+        <div class="labels" id="labels"></div>
+        <div class="over"><div class="walk" id="walk" hidden></div><div class="toast" id="toast" hidden></div></div>
+        <div class="dock" id="dock">
+          <div class="chips" id="chips"></div>
+          <div class="ctl">
+            <button id="bPlay" type="button" aria-label="Play or pause">▶</button>
+            <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Move progress">
+            <button id="bSlow" type="button" aria-pressed="false">Slow</button>
+            <span class="cnt" id="cnt"></span>
+            <button id="bBack2" type="button">Put back</button>
+          </div>
+        </div>
+      </div>
+      <aside class="info" id="info"></aside>
+    </div>
+  </section>
+
+  <!-- ===================================================== PART 2 -->
+  <section class="pane" id="p2" role="tabpanel" aria-labelledby="t-unit-cells" hidden>
+    <div class="bar">
+      <label class="lbl" for="uPat">Pattern</label>
+      <select id="uPat" aria-label="Pattern"></select>
+      <span class="btn filebtn" role="button">Load a photo<input id="uFile" type="file" accept="image/*" aria-label="Load a photo of a tile sheet"></span>
+      <span class="sp"></span>
+      <button id="uFit" type="button">Fit</button>
+      <button id="uResetCell" type="button">Reset cell</button>
+    </div>
+    <div class="app">
+      <div class="stage" id="uStage">
+        <canvas id="uCanvas"></canvas>
+        <div class="over"><div class="toast" id="uToast" hidden></div></div>
+        <div class="dock">
+          <div class="chips" id="uChips">
+            <button type="button" id="uTile" aria-pressed="false">Tile it</button>
+            <button type="button" id="uShiftA" aria-pressed="false">Shift test: a</button>
+            <button type="button" id="uShiftB" aria-pressed="false">Shift test: b</button>
+            <button type="button" id="uSnap" aria-pressed="true">Snap</button>
+            <button type="button" id="uMistake" class="fake">Common mistake</button>
+            <button type="button" id="uAnswer" class="ans" aria-pressed="false">Show answer</button>
+          </div>
+        </div>
+      </div>
+      <aside class="info" id="uInfo"></aside>
+    </div>
+  </section>
+
+  <!-- ===================================================== PART 3 -->
+  <section class="pane" id="p3" role="tabpanel" aria-labelledby="t-lattices" hidden>
+    <div class="bar">
+      <div class="seg" id="lStruct" role="group" aria-label="Structure">
+        <button type="button" data-v="nacl" aria-pressed="true">NaCl</button>
+        <button type="button" data-v="cscl" aria-pressed="false">CsCl</button>
+      </div>
+      <div class="seg" id="lStyle" role="group" aria-label="Model style">
+        <button type="button" data-v="bench" aria-pressed="true">Bench model</button>
+        <button type="button" data-v="fill" aria-pressed="false">Space-filling</button>
+        <button type="button" data-v="cut" aria-pressed="false">Cut at the cell</button>
+      </div>
+      <div class="seg" id="lExt" role="group" aria-label="Cells shown">
+        <button type="button" data-v="1" aria-pressed="true">1 cell</button>
+        <button type="button" data-v="2" aria-pressed="false">8 cells</button>
+      </div>
+      <span class="sp"></span>
+      <button id="lReset" type="button">Reset view</button>
+    </div>
+    <div class="app">
+      <div class="stage" id="lStage">
+        <div class="labels" id="lLabels"></div>
+        <div class="over"><div class="toast" id="lToast" hidden></div></div>
+        <div class="dock"><div class="chips" id="lChips"></div></div>
+      </div>
+      <aside class="info" id="lInfo"></aside>
+    </div>
+  </section>
+</div>

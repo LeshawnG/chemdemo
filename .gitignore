@@ -1,0 +1,6 @@
+npmtmp/
+out/
+*.png
+*.jpg
+figs.json
+sheets.json

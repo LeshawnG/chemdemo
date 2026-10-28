@@ -1,0 +1,2 @@
+[{"photo":"testphoto.jpg","name":"Test sheet A (diamonds)","a":[60,80],"b":[-60,80],"o":[60,40],"type":"Centred rectangular","per":"1 diamond","note":"Primitive: a rhombus holding 1 diamond. Conventional: the 120 × 160 rectangle holding 2.","conv":[[120,0],[0,160]],"wrong":{"a":[120,0],"b":[0,80],"why":"A rectangle one row high fails: the rows are offset."}},
+ {"photo":"t_flags.jpg","name":"Test sheet B (flags)","a":[41.1,64.4],"b":[-48.1,75.5],"type":"Oblique","per":"1 flag","note":"Primitive parallelogram; no rectangle fits."}]
